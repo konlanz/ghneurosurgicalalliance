@@ -6,8 +6,143 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/public//vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/public/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/public/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/public/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/public/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/public/css/main.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
 </head>
 <body>
   <app-root></app-root>
+
+<body>
+
+	<div class="size1 bg0 where1-parent">
+
+		<div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+			<div class="wrap-pic1">
+				<img src="assets/public/images/logo.png" alt="LOGO">
+			</div>
+
+			<div class="p-t-50 p-b-60">
+				<p class="m1-txt1 p-b-36">
+					Ghana Neurosurgical Alliance<span class="m1-txt2"> Coming Soon</span>	</p>
+
+
+				<p class="s2-txt3 p-t-18">
+
+					<a href=""><span class="m1-txt2">Join US On Our Social Networks</span></a>
+				</p>
+			</div>
+
+			<div class="flex-w">
+				<a href="" class="flex-c-m size5 bg3 how1 trans-04 m-r-5">
+					<i class="fa fa-facebook"></i>
+				</a>
+
+				<a href="" class="flex-c-m size5 bg4 how1 trans-04 m-r-5">
+					<i class="fa fa-twitter"></i>
+				</a>
+
+				<a href="" class="flex-c-m size5 bg5 how1 trans-04 m-r-5">
+					<i class="fa fa-instagram"></i>
+				</a>
+			</div>
+		</div>
+		<!-- Coutdown -->
+		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2" style="background-image: url('assets/public/images/Banner.jpg');">
+			<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 days"><div id="days"></div></span>
+					<span class="s2-txt4">Days</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 hours"><div id="hrs"></div></span>
+					<span class="s2-txt4">Hours</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 minutes"><div id="min"></div></span>
+					<span class="s2-txt4">Minutes</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 seconds"><div id="sec"></div></span>
+					<span class="s2-txt4">Seconds</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Form -->
+
+	</div>
+
+
+<!--===============================================================================================-->
+	<script src="assets/public/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/public/vendor/bootstrap/js/popper.js"></script>
+	<script src="assets/public/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/public/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/public/vendor/countdowntime/moment.min.js"></script>
+	<script src="assets/public/vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="assets/public/vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="assets/public/vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		var countDownDate = new Date("Dec 31, 2021 18:00:00").getTime();
+		var x = setInterval(function() {
+
+// Get today's date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Output the result in an element with id="demo"
+document.getElementById("days").innerHTML = days;
+document.getElementById("hrs").innerHTML = hours;
+document.getElementById("min").innerHTML = minutes;
+document.getElementById("sec").innerHTML = seconds;
+// If the count down is over, write some text
+if (distance < 0) {
+  clearInterval(x);
+  document.getElementById("demo").innerHTML = "EXPIRED";
+}
+}, 1000);
+
+
+</script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+</body>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>
